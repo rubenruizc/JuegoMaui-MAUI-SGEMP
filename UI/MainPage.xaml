@@ -49,18 +49,23 @@
                 </Label>
 
                 <Entry
+                    x:Name="NombreEntry"
                     Placeholder="Nombre"
-                    BackgroundColor="White"></Entry>
+                    BackgroundColor="White"
+                    TextChanged="OnTextChanged" />
 
                 <Entry
+                    x:Name="ContrasenaEntry"
                     Placeholder="Contraseña"
-                    BackgroundColor="White"></Entry>
-
+                    BackgroundColor="White"
+                    IsPassword="True"
+                    TextChanged="OnTextChanged" />
                 <Button
                     x:Name="Iniciar"
                     Text="Iniciar Sesión" 
                     Style="{StaticResource CustomButtonStyle}"
-                    Clicked="IniciarSesion" />
+                    Clicked="IniciarSesion"
+                    IsEnabled="False" />
                 
             </VerticalStackLayout>
         </ScrollView>
